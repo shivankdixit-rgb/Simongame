@@ -9,13 +9,16 @@ let btns=["pink","green","orange","blue"];
 let h2=document.querySelector('h2');
 let body=document.querySelector('body');
 let high_score=document.querySelector('.high-score');
-document.addEventListener('keypress',function(){
+document.addEventListener('keypress',function(event)
+{
+   if(event.code=='Space'){
    if(started==false){
       console.log("game is started!"); 
       level=0;
       gameSeq=[];
       levelUp();
    } 
+}
 });
  
 
@@ -53,14 +56,16 @@ function checkAns(idx){
       levelUp();
       }
    } else{
-      h2.innerText=`Game over!your score was-${level-1} press any key to again start the game.`;
+      h2.innerText=`Game over! Press space bar to start the game.${'\n'}
+      Your score-${level-1}`;
       if((level-1)>=highScore){
          highScore=level-1;
-         high_score.innerText=`HighScore-${highScore}`;
+         high_score.innerText=` HighestScore-${highScore}`;
       }
-      body.classList.add('game-over');
+      body.classList.add('game-over','audio');
       setTimeout(() => {
-         body.classList.remove('game-over');
+         body.classList.remove('game-over','audio');
+        document.querySelector('.audio').play();
       }, 100);
    }
 }
