@@ -11,17 +11,7 @@ let body=document.querySelector('body');
 let high_score=document.querySelector('.high-score');
 let spacebar=document.querySelector('.spacebar');
 
-// document.addEventListener('keypress',function(event)
-// {
-//    if(event.code=='Space'){
-//    if(started==false){
-//       console.log("game is started!"); 
-//       level=0;
-//       gameSeq=[];
-//       levelUp();
-//    } 
-// }
-// });
+ 
 spacebar.addEventListener('click',function(){
    if(started==false){
       console.log("game is started!");
