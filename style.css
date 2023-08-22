@@ -10,11 +10,11 @@ body{
   }
   @media(max-width:450px){
     .btn{
-      height:120px;
-      width:120px;
+      height:140px;
+      width:140px;
       border:10px solid black;
       border-radius:30px;
-      margin:2rem;
+      
     }
    }
   .btn-container{
